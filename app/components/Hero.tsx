@@ -6,7 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-16 overflow-hidden">
+    <section className="relative pt-40 pb-16 overflow-hidden">
       {/* Background decoration */}
       <motion.div
         className="absolute inset-0 bg-blue-50/50"
@@ -20,24 +20,24 @@ export default function Hero() {
         }}
       />
       
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="flex-1 text-center lg:text-left max-w-2xl">
+          <div className="flex-1 text-center lg:text-left max-w-2xl relative z-20">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             >
-              <span className="text-gray-900">Tu Asistente</span>{' '}
-              <span className="text-blue-600">Financiero</span>{' '}
-              <span className="text-gray-900">Inteligente</span>
+              <span className="text-[#6B7280]">Tu Asistente</span>{' '}
+              <span className="text-[#93C5FD]">Financiero</span>{' '}
+              <span className="text-[#6B7280]">Inteligente</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-600 mb-6"
+              className="text-lg md:text-xl text-[#6B7280] mb-6"
             >
               Nicolás te ayuda a organizar tus finanzas de manera inteligente. Controla tus gastos, establece presupuestos y recibe consejos personalizados impulsados por IA.
             </motion.p>
@@ -47,7 +47,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="flex items-center justify-center lg:justify-start gap-2 text-lg mb-8"
             >
-              <span className="text-gray-600">Tan sencillo como enviar un</span>
+              <span className="text-[#6B7280]">Tan sencillo como enviar un</span>
               <span className="text-[#25D366] font-medium">WhatsApp</span>
               <FaWhatsapp className="text-[#25D366] text-2xl" />
             </motion.div>
@@ -74,9 +74,9 @@ export default function Hero() {
               </motion.a>
             </div>
           </div>
-          <div className="flex-1 relative">
+          <div className="flex-1 relative z-10">
             <motion.div
-              className="relative z-10"
+              className="relative"
               animate={{
                 y: [0, -20, 0],
               }}
