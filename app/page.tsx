@@ -9,20 +9,20 @@ import Testimonials from './components/Testimonials'
 import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import WhatsAppButton from './components/WhatsAppButton'
+import Footer from './components/Footer'
 
 export default function Home() {
   return (
-    <>
+    <main className="min-h-screen">
       <Header />
-      <main className="overflow-hidden">
-        <Hero />
-        <About />
-        <Features />
-        <Testimonials />
-        <FAQ />
-        <CTA />
-        <WhatsAppButton />
-      </main>
-    </>
+      <Hero />
+      <About />
+      <Features />
+      <Testimonials />
+      <FAQ />
+      <CTA />
+      <WhatsAppButton />
+      <Footer />
+    </main>
   )
 } 

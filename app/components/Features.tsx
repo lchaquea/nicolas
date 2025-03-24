@@ -92,6 +92,18 @@ export default function Features() {
             ))}
           </div>
         </div>
+        <div className="mt-12 flex justify-center">
+          <motion.a
+            href="https://wa.me/15551493974?text=Hola%20Nicolás%2C%20como%20funciona%20esto%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="btn-primary text-center"
+          >
+            Pruébalo Gratis
+          </motion.a>
+        </div>
       </div>
     </section>
   )

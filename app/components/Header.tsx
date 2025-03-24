@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 const navigation = [
   { name: 'Inicio', href: '#' },
@@ -27,7 +28,9 @@ export default function Header() {
               height={40}
               className="h-10 w-auto"
             />
-            <span className="text-xl font-semibold text-primary-600">Nicolas</span>
+            <Link href="/" className="text-2xl font-bold text-gray-800">
+              Nicolás
+            </Link>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -75,7 +78,9 @@ export default function Header() {
                 height={40}
                 className="h-10 w-auto"
               />
-              <span className="text-xl font-semibold text-primary-600">Nicolas</span>
+              <Link href="/" className="text-2xl font-bold text-gray-800">
+                Nicolás
+              </Link>
             </a>
             <button
               type="button"

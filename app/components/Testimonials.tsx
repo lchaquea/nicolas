@@ -103,13 +103,16 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <motion.button
+          <motion.a
+            href="https://wa.me/15551493974?text=Hola%20Nicolás%2C%20como%20funciona%20esto%3F"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-primary"
+            className="btn-primary inline-block"
           >
-            Únete a Nuestra Comunidad
-          </motion.button>
+            Pruébalo Gratis
+          </motion.a>
         </motion.div>
       </div>
     </section>

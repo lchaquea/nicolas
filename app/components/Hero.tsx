@@ -30,20 +30,24 @@ export default function Hero() {
               establece presupuestos y recibe consejos personalizados impulsados por IA.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <motion.button
+              <motion.a
+                href="https://wa.me/15551493974?text=Hola%20Nicolás%2C%20como%20funciona%20esto%3F"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-primary"
+                className="btn-primary text-center"
               >
                 Pruébalo Gratis
-              </motion.button>
-              <motion.button
+              </motion.a>
+              <motion.a
+                href="#features"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-secondary"
+                className="btn-secondary text-center"
               >
                 Ver Demo
-              </motion.button>
+              </motion.a>
             </div>
             <div className="mt-8 flex items-center gap-4">
               <div className="flex -space-x-2">
