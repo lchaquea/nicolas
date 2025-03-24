@@ -29,15 +29,15 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             >
-              <span className="text-[#6B7280]">Tu Asistente</span>{' '}
-              <span className="text-[#4F46E5]">Financiero</span>{' '}
-              <span className="text-[#6B7280]">Inteligente</span>
+              <span className="text-[#94A3B8]">Tu Asistente</span>{' '}
+              <span className="text-[#0EA5E9]">Financiero</span>{' '}
+              <span className="text-[#94A3B8]">Inteligente</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-600 mb-6 relative z-20"
+              className="text-lg md:text-xl text-[#64748B] mb-6 relative z-20"
             >
               Nicolás te ayuda a organizar tus finanzas de manera inteligente. Controla tus gastos, establece presupuestos y recibe consejos personalizados impulsados por IA.
             </motion.p>
@@ -47,7 +47,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="flex items-center justify-center lg:justify-start gap-2 text-lg mb-8 relative z-20"
             >
-              <span className="text-gray-600">Tan sencillo como enviar un</span>
+              <span className="text-[#64748B]">Tan sencillo como enviar un</span>
               <span className="text-[#25D366] font-medium">WhatsApp</span>
               <FaWhatsapp className="text-[#25D366] text-2xl" />
             </motion.div>
