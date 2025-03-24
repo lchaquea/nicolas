@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { FaWhatsapp } from 'react-icons/fa'
 
 const userAvatars = [
   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64&q=80',
@@ -12,24 +13,49 @@ const userAvatars = [
 
 export default function Hero() {
   return (
-    <section className="relative bg-white pt-32 pb-16 sm:pt-36 sm:pb-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col justify-center"
-          >
-            <h1 className="text-4xl font-bold tracking-tight text-secondary-900 sm:text-5xl md:text-6xl">
-              Tu Asistente Financiero{' '}
-              <span className="text-primary-600">Inteligente</span>
-            </h1>
-            <p className="mt-6 text-lg text-secondary-600 max-w-xl">
-              Nicolas te ayuda a organizar tus finanzas de manera inteligente. Controla tus gastos, 
-              establece presupuestos y recibe consejos personalizados impulsados por IA.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+    <section className="relative py-20 overflow-hidden">
+      {/* Background decoration */}
+      <motion.div
+        className="absolute inset-0 bg-blue-50/50"
+        animate={{
+          backgroundPosition: ['0% 0%', '100% 100%'],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+      />
+      
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="flex-1 text-center lg:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+            >
+              Tu Asistente Financiero Inteligente
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-lg md:text-xl text-gray-600 mb-6"
+            >
+              Nicolás te ayuda a organizar tus finanzas de manera inteligente. Controla tus gastos, establece presupuestos y recibe consejos personalizados impulsados por IA.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex items-center justify-center lg:justify-start gap-2 text-lg text-gray-600 mb-8"
+            >
+              <span>Tan sencillo como enviar un WhatsApp</span>
+              <FaWhatsapp className="text-green-500 text-2xl" />
+            </motion.div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <motion.a
                 href="https://wa.me/15551493974?text=Hola%20Nicolás%2C%20como%20funciona%20esto%3F"
                 target="_blank"
@@ -41,7 +67,9 @@ export default function Hero() {
                 Pruébalo Gratis
               </motion.a>
               <motion.a
-                href="#features"
+                href="https://wa.me/15551493974?text=Hola%20Nicolás%2C%20me%20gustaría%20ver%20una%20demo"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-secondary text-center"
@@ -49,44 +77,32 @@ export default function Hero() {
                 Ver Demo
               </motion.a>
             </div>
-            <div className="mt-8 flex items-center gap-4">
-              <div className="flex -space-x-2">
-                {userAvatars.map((avatar, i) => (
-                  <div key={i} className="relative w-8 h-8">
-                    <Image
-                      src={avatar}
-                      alt={`Usuario ${i + 1}`}
-                      width={32}
-                      height={32}
-                      className="rounded-full ring-2 ring-white"
-                      sizes="32px"
-                      priority={i < 2}
-                    />
-                  </div>
-                ))}
+          </div>
+          <div className="flex-1 relative">
+            <motion.div
+              className="relative z-10"
+              animate={{
+                y: [0, -20, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
+            >
+              <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
+                <div className="absolute inset-0 bg-blue-100 rounded-full transform -translate-x-4 translate-y-4" />
+                <Image
+                  src="/nicolas-avatar.png"
+                  alt="Nicolas AI Assistant"
+                  width={384}
+                  height={384}
+                  className="relative z-10 rounded-full shadow-xl"
+                  priority
+                />
               </div>
-              <p className="text-sm text-secondary-600">
-                +1,000 usuarios ya confían en Nicolas
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="relative lg:mt-0"
-          >
-            <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0">
-              <Image
-                src="/assets/nicolasimage.svg"
-                alt="Nicolas AI Assistant"
-                width={400}
-                height={400}
-                className="mx-auto"
-                priority
-              />
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
