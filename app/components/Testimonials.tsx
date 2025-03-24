@@ -71,12 +71,15 @@ export default function Testimonials() {
                   "{testimonial.content}"
                 </p>
                 <div className="mt-6 flex items-center gap-4">
-                  <div className="relative h-12 w-12">
+                  <div className="relative w-12 h-12">
                     <Image
                       src={testimonial.image}
                       alt={testimonial.author}
-                      fill
-                      className="rounded-full object-cover"
+                      width={48}
+                      height={48}
+                      className="rounded-full"
+                      sizes="48px"
+                      priority={index === 0}
                     />
                   </div>
                   <div>

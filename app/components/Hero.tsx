@@ -52,8 +52,11 @@ export default function Hero() {
                     <Image
                       src={avatar}
                       alt={`Usuario ${i + 1}`}
-                      fill
-                      className="rounded-full ring-2 ring-white object-cover"
+                      width={32}
+                      height={32}
+                      className="rounded-full ring-2 ring-white"
+                      sizes="32px"
+                      priority={i < 2}
                     />
                   </div>
                 ))}
