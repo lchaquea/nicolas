@@ -55,13 +55,16 @@ export default function Header() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <motion.button
+          <motion.a
+            href="https://wa.me/15551493974?text=Hola%20Nicolás%2C%20como%20funciona%20esto%3F"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="btn-primary"
           >
             Pruébalo Gratis
-          </motion.button>
+          </motion.a>
         </div>
       </nav>
       
@@ -106,14 +109,17 @@ export default function Header() {
                 ))}
               </div>
               <div className="py-6">
-                <motion.button
+                <motion.a
+                  href="https://wa.me/15551493974?text=Hola%20Nicolás%2C%20como%20funciona%20esto%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="btn-primary w-full"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Pruébalo Gratis
-                </motion.button>
+                </motion.a>
               </div>
             </div>
           </div>

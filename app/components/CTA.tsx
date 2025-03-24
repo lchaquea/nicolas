@@ -20,20 +20,26 @@ export default function CTA() {
             Únete a miles de personas que ya están transformando su relación con el dinero gracias a Nicolas.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <motion.button
+            <motion.a
+              href="https://wa.me/15551493974?text=Hola%20Nicolás%2C%20como%20funciona%20esto%3F"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="rounded-lg bg-white px-8 py-4 text-base font-semibold text-primary-600 shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Pruébalo Gratis
-            </motion.button>
-            <motion.button
+            </motion.a>
+            <motion.a
+              href="https://wa.me/15551493974?text=Hola%20Nicolás%2C%20me%20gustaría%20ver%20una%20demo"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="rounded-lg bg-primary-500 px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Ver Demo
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Background sparkles */}
