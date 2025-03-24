@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { StarIcon } from '@heroicons/react/24/solid'
+import Image from 'next/image'
 
 const testimonials = [
   {
@@ -9,18 +10,21 @@ const testimonials = [
     author: "María G.",
     role: "Emprendedora",
     rating: 5,
+    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=128&h=128&fit=crop&crop=face"
   },
   {
     content: "La mejor inversión que he hecho para mi salud financiera. La interfaz es intuitiva y los insights son muy valiosos.",
     author: "Carlos R.",
     role: "Profesional Independiente",
     rating: 5,
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=128&h=128&fit=crop&crop=face"
   },
   {
     content: "Gracias a Nicolas, finalmente tengo control sobre mis gastos y estoy ahorrando más que nunca.",
     author: "Ana P.",
     role: "Diseñadora",
     rating: 5,
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=128&h=128&fit=crop&crop=face"
   },
 ]
 
@@ -66,18 +70,43 @@ export default function Testimonials() {
                 <p className="mt-4 text-lg text-secondary-600">
                   "{testimonial.content}"
                 </p>
-                <div className="mt-6">
-                  <p className="font-medium text-secondary-900">
-                    {testimonial.author}
-                  </p>
-                  <p className="text-sm text-secondary-600">
-                    {testimonial.role}
-                  </p>
+                <div className="mt-6 flex items-center gap-4">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.author}
+                    width={48}
+                    height={48}
+                    className="h-12 w-12 rounded-full"
+                  />
+                  <div>
+                    <p className="font-medium text-secondary-900">
+                      {testimonial.author}
+                    </p>
+                    <p className="text-sm text-secondary-600">
+                      {testimonial.role}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center"
+        >
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="btn-primary"
+          >
+            Únete a Nuestra Comunidad
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   )

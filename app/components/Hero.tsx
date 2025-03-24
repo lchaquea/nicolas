@@ -3,9 +3,16 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
+const userAvatars = [
+  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop&crop=face',
+  'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=64&h=64&fit=crop&crop=face',
+  'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=64&h=64&fit=crop&crop=face',
+  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&h=64&fit=crop&crop=face',
+]
+
 export default function Hero() {
   return (
-    <section className="relative bg-white pt-20 pb-16 sm:pt-24 sm:pb-20">
+    <section className="relative bg-white pt-32 pb-16 sm:pt-36 sm:pb-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8">
           <motion.div
@@ -23,19 +30,31 @@ export default function Hero() {
               establece presupuestos y recibe consejos personalizados impulsados por IA.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <button className="btn-primary">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-primary"
+              >
                 Pruébalo Gratis
-              </button>
-              <button className="btn-secondary">
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-secondary"
+              >
                 Ver Demo
-              </button>
+              </motion.button>
             </div>
             <div className="mt-8 flex items-center gap-4">
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
+                {userAvatars.map((avatar, i) => (
+                  <Image
                     key={i}
-                    className="inline-block h-8 w-8 rounded-full bg-primary-100"
+                    src={avatar}
+                    alt={`Usuario ${i + 1}`}
+                    width={32}
+                    height={32}
+                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
                   />
                 ))}
               </div>
