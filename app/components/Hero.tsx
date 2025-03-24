@@ -4,10 +4,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 const userAvatars = [
-  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop&crop=face',
-  'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=64&h=64&fit=crop&crop=face',
-  'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=64&h=64&fit=crop&crop=face',
-  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&h=64&fit=crop&crop=face',
+  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64&q=80',
+  'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=64&h=64&q=80',
+  'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64&q=80',
+  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64&q=80',
 ]
 
 export default function Hero() {
@@ -48,14 +48,14 @@ export default function Hero() {
             <div className="mt-8 flex items-center gap-4">
               <div className="flex -space-x-2">
                 {userAvatars.map((avatar, i) => (
-                  <Image
-                    key={i}
-                    src={avatar}
-                    alt={`Usuario ${i + 1}`}
-                    width={32}
-                    height={32}
-                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
-                  />
+                  <div key={i} className="relative w-8 h-8">
+                    <Image
+                      src={avatar}
+                      alt={`Usuario ${i + 1}`}
+                      fill
+                      className="rounded-full ring-2 ring-white object-cover"
+                    />
+                  </div>
                 ))}
               </div>
               <p className="text-sm text-secondary-600">

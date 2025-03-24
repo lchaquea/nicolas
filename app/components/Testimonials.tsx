@@ -10,21 +10,21 @@ const testimonials = [
     author: "María G.",
     role: "Emprendedora",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=128&h=128&fit=crop&crop=face"
+    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=128&h=128&q=80"
   },
   {
     content: "La mejor inversión que he hecho para mi salud financiera. La interfaz es intuitiva y los insights son muy valiosos.",
     author: "Carlos R.",
     role: "Profesional Independiente",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=128&h=128&fit=crop&crop=face"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=128&h=128&q=80"
   },
   {
     content: "Gracias a Nicolas, finalmente tengo control sobre mis gastos y estoy ahorrando más que nunca.",
     author: "Ana P.",
     role: "Diseñadora",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=128&h=128&fit=crop&crop=face"
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=128&h=128&q=80"
   },
 ]
 
@@ -71,13 +71,14 @@ export default function Testimonials() {
                   "{testimonial.content}"
                 </p>
                 <div className="mt-6 flex items-center gap-4">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.author}
-                    width={48}
-                    height={48}
-                    className="h-12 w-12 rounded-full"
-                  />
+                  <div className="relative h-12 w-12">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.author}
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  </div>
                   <div>
                     <p className="font-medium text-secondary-900">
                       {testimonial.author}
