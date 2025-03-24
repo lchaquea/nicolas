@@ -28,7 +28,7 @@ export default function Header() {
               height={40}
               className="h-10 w-auto"
             />
-            <Link href="/" className="text-2xl font-bold text-blue-600">
+            <Link href="/" className="text-2xl font-bold text-[#0066FF]">
               Nicolás
             </Link>
           </a>
@@ -78,7 +78,7 @@ export default function Header() {
                 height={40}
                 className="h-10 w-auto"
               />
-              <Link href="/" className="text-2xl font-bold text-blue-600">
+              <Link href="/" className="text-2xl font-bold text-[#0066FF]">
                 Nicolás
               </Link>
             </a>

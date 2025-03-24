@@ -4,16 +4,9 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { FaWhatsapp } from 'react-icons/fa'
 
-const userAvatars = [
-  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64&q=80',
-  'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=64&h=64&q=80',
-  'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64&q=80',
-  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64&q=80',
-]
-
 export default function Hero() {
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section className="relative pt-32 pb-16 overflow-hidden">
       {/* Background decoration */}
       <motion.div
         className="absolute inset-0 bg-blue-50/50"
@@ -27,16 +20,18 @@ export default function Hero() {
         }}
       />
       
-      <div className="container mx-auto px-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="flex-1 text-center lg:text-left">
+          <div className="flex-1 text-center lg:text-left max-w-2xl">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             >
-              Tu Asistente Financiero Inteligente
+              <span className="text-gray-900">Tu Asistente</span>{' '}
+              <span className="text-blue-600">Financiero</span>{' '}
+              <span className="text-gray-900">Inteligente</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -50,10 +45,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex items-center justify-center lg:justify-start gap-2 text-lg text-gray-600 mb-8"
+              className="flex items-center justify-center lg:justify-start gap-2 text-lg mb-8"
             >
-              <span>Tan sencillo como enviar un WhatsApp</span>
-              <FaWhatsapp className="text-green-500 text-2xl" />
+              <span className="text-gray-600">Tan sencillo como enviar un</span>
+              <span className="text-[#25D366] font-medium">WhatsApp</span>
+              <FaWhatsapp className="text-[#25D366] text-2xl" />
             </motion.div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <motion.a
@@ -92,14 +88,16 @@ export default function Hero() {
             >
               <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
                 <div className="absolute inset-0 bg-blue-100 rounded-full transform -translate-x-4 translate-y-4" />
-                <Image
-                  src="/nicolas-avatar.png"
-                  alt="Nicolas AI Assistant"
-                  width={384}
-                  height={384}
-                  className="relative z-10 rounded-full shadow-xl"
-                  priority
-                />
+                <div className="relative z-20">
+                  <Image
+                    src="/assets/nicolasimage.svg"
+                    alt="Nicolas AI Assistant"
+                    width={384}
+                    height={384}
+                    className="rounded-full shadow-xl"
+                    priority
+                  />
+                </div>
               </div>
             </motion.div>
           </div>
