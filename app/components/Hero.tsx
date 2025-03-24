@@ -52,7 +52,7 @@ export default function Hero() {
           >
             <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0">
               <Image
-                src="/nicolas-avatar.png"
+                src="/assets/nicolasimage.svg"
                 alt="Nicolas AI Assistant"
                 width={400}
                 height={400}
