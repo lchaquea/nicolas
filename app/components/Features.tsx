@@ -9,6 +9,7 @@ import {
   DocumentChartBarIcon,
   ShieldCheckIcon,
 } from '@heroicons/react/24/outline'
+import { FaWhatsapp } from 'react-icons/fa'
 
 const features = [
   {
@@ -99,9 +100,10 @@ export default function Features() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-primary text-center"
+            className="btn-primary text-center flex items-center justify-center gap-2"
           >
             Pruébalo Gratis
+            <FaWhatsapp className="text-white" />
           </motion.a>
         </div>
       </div>

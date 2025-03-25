@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { StarIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
+import { FaWhatsapp } from 'react-icons/fa'
 
 const testimonials = [
   {
@@ -109,9 +110,10 @@ export default function Testimonials() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-primary inline-block"
+            className="btn-primary inline-flex items-center gap-2"
           >
             Pruébalo Gratis
+            <FaWhatsapp className="text-white" />
           </motion.a>
         </motion.div>
       </div>

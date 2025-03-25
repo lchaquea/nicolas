@@ -58,9 +58,10 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-primary text-center"
+                className="btn-primary text-center flex items-center justify-center gap-2"
               >
                 Pruébalo Gratis
+                <FaWhatsapp className="text-white" />
               </motion.a>
               <motion.a
                 href="https://wa.me/15551493974?text=Hola%20Nicolás%2C%20me%20gustaría%20ver%20una%20demo"

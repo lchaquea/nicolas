@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { FaWhatsapp } from 'react-icons/fa'
 
 const navigation = [
   { name: 'Inicio', href: '#' },
@@ -61,9 +62,10 @@ export default function Header() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-primary"
+            className="btn-primary flex items-center gap-2"
           >
             Pruébalo Gratis
+            <FaWhatsapp className="text-white" />
           </motion.a>
         </div>
       </nav>
@@ -115,10 +117,11 @@ export default function Header() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="btn-primary w-full"
+                  className="btn-primary w-full flex items-center justify-center gap-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Pruébalo Gratis
+                  <FaWhatsapp className="text-white" />
                 </motion.a>
               </div>
             </div>
